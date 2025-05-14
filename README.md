@@ -18,19 +18,19 @@ Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/
 > [!CAUTION]
 > Khu Vực Dành Cho Bạn Nào Thay Ảnh Nền Hoặc Chỉnh Sửa Config
 > <details>
-  <summary>Chỉnh Sửa Vị Trí Bố Cục Hiện Thị</summary>
-  
- Do Mình Code Để Hỗ Trợ Tốt Nhất Những Cái Mặc Định Nên Có Thể Gây Lỗi Khi Custom.
- Nếu Bạn Muốn Thay Background Hãy Tìm Đoạn Code.... 
-  
-  ```
-  --Code-1: left bottom/cover no-repeat;
-  ```
-Và Sửa Thành Dưới Đây Để Hiện Thị Ở Chính Giữa File....
-  ```
-  --Code-1: center center/cover no-repeat;
-  ```
-</details>
+>  <summary>Chỉnh Sửa Vị Trí Bố Cục Hiện Thị</summary>
+>  
+> Do Mình Code Để Hỗ Trợ Tốt Nhất Những Cái Mặc Định Nên Có Thể Gây Lỗi Khi Custom.
+> Nếu Bạn Muốn Thay Background Hãy Tìm Đoạn Code.... 
+>  
+>  ```
+>  --Code-1: left bottom/cover no-repeat;
+>  ```
+> Và Sửa Thành Dưới Đây Để Hiện Thị Ở Chính Giữa File....
+>  ```
+>  --Code-1: center center/cover no-repeat;
+>  ```
+> </details>
 
 
 ***Và Chỉ Có Như Vậy Thôi!***
