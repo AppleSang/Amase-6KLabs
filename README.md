@@ -31,6 +31,14 @@ Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/
 >  --Code-1: center center/cover no-repeat;
 >  ```
 > </details>
+> <details>
+>  <summary>Thay Đổi Ảnh</summary>
+>  
+> Bạn Chỉ Có Thể Thay Đổi Thành Dạng PNG, GIF, WebP,...  
+> Các Dạng MP4, WebM,... Sẽ Không Được Chấp Nhận  
+> Bạn Có Thể Up Ảnh/GIF Lên Github/Discord Để Thay Vào!
+>  
+> </details>
 
 
 ***Và Chỉ Có Như Vậy Thôi!***
