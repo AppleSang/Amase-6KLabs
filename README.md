@@ -10,7 +10,9 @@ Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/
 >     Bạn Có Thể Thay Đổi Ảnh/Background Ở Ngay Phần Đầu Config - MAIN CONFIG
 <sup> Vì mình không có After Effect Để Remove Vài Thứ Nên Nếu Không Ưng Bạn Có Thể Xài Bản [Amase_Legacy.CSS](https://github.com/AppleSang/Amase-6KLabs/blob/main/Amase_Legacy.CSS)</sup>
 > [!IMPORTANT]
-> Tắt "Cover Blur" Trong 6KLabs Nếu Phần Player Bị Đè Màu!
+> Tắt "[Cover Blur](https://6klabs.com/dashboard/widgets/amuse)" Trong 6KLabs Nếu Phần Player Bị Đè Màu!
+> ![image](https://github.com/user-attachments/assets/5a0cb08d-ce8a-459e-9d76-ef0aaa22ee46)
+
 
 > [!WARNING]
 > Nếu Không Có Thay Đổi Gì Hoặc Không Hiện "Inject Modify Success" Thì Hãy Refresh Lại Brownser Source Nha!
