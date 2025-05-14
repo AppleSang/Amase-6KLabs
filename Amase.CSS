@@ -2,7 +2,7 @@
   /* Some asset GIF, background banner from 7TV - https://www.twitch.tv/desmondvu and GoalBar - https://nerdordie.com/product/iridescent-stream-pack */
   /* If you found bug, you create issue on github: https://github.com/AppleSang/Amase-6KLabs/issues */
 
-  /* TURN OFF "COVER BLUR" FOR BEST VISUAL */
+  /* TURN OFF "COVER BLUR" FOR BEST VISUAL - https://6klabs.com/dashboard/widgets/amuse */
 
 @import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Pacifico&display=swap");
 
@@ -15,17 +15,23 @@
   	--BG-SongInfo: url("https://raw.githubusercontent.com/AppleSang/Amase-6KLabs/refs/heads/main/texturepack/Skyshard_Wave-E6.gif");
   	/* If Appear When Change Song Or Using "Vinyl" Canva - Leave Blank If You Dont Want - Default Value: https://raw.githubusercontent.com/AppleSang/LumboChat-CSS-Youtube/refs/heads/main/asset/Honey.webp*/
   	--BG-Cover: url("");
-  	/* Emoji Appearance In Cover - Leave If Blank If You Dont Like*/
-  	--Emoji1: url("https://cdn.7tv.app/emote/01F6NET6G00009JYTB75QDKV1S/4x.avif");
-  	--Emoji2: url("https://cdn.7tv.app/emote/01FBS4X63R000AAZQB4F0E7SEB/4x.avif"); 
-    /* It Appear When Using Player "Boxy","Shell" And "macOS" */
-    --BG-SongInfo-MacOS: url("https://raw.githubusercontent.com/AppleSang/LumboChat-CSS-Youtube/refs/heads/main/asset/Dark_Iridescent.webp");
+  	/* Emoji Appearance In Cover/Album Art - Leave If Blank If You Dont Like */
+  	--Emoji1: url("");
+  	--Emoji2: url("https://cdn.7tv.app/emote/01FBS4X63R000AAZQB4F0E7SEB/4x.avif");   /* DJ Emoji */
+    /* It Appear When Using Player "Boxy" */
     --Text-Boxy: "AppleSang";
     --FontSize-Boxy: 15px;  /* Recommend This Value < 16 */
-    --Text-Shell: "AppleSang";
+    /* It Appear When Using Player "macOS" */
+    --BG-SongInfo-MacOS: url("https://github.com/AppleSang/CSS-Chat-For-Youtube/raw/refs/heads/main/asset/Dark_Iridescent.webp");
     --Text-macOS: "AppleSang";
+    /* It Appear When Using Player "Shell" */
+    --BG-TitleBar-Shell: url("https://raw.githubusercontent.com/AppleSang/Amase-6KLabs/refs/heads/main/texturepack/Skyshard-WaveBar_Trans.gif");
+    --Text-Shell: "AppleSang";
     /* It Appear When Using Player "Discord" */
-    --BG-DiscordActiveChat: url("https://github.com/AppleSang/CSS-Chat-For-Youtube/raw/refs/heads/main/asset/Crimson.webp");
+    --BG-SongInfo-Discord: url("https://github.com/AppleSang/CSS-Chat-For-Youtube/raw/refs/heads/main/asset/Dark_Iridescent.webp");    
+    --DiscordActiveChat: url("https://github.com/AppleSang/CSS-Chat-For-Youtube/raw/refs/heads/main/asset/Crimson.webp");
+    /* Code You Can Edit Here - READ CAREFULLY ON GITHUB */
+    --Code-1: left bottom/cover no-repeat;
   }
 
   /* MAIN CODE, TOUCH IF YOU WHAT YOU DO */
@@ -54,19 +60,19 @@
    }
   /* Change Background */
   #songtime { 
-  	background: var(--BG-SongTime) left bottom/cover no-repeat;
+  	background: var(--BG-SongTime) var(--Code-1);
    }
   .relative.aspect-square.h-full {
   	background: var(--BG-Cover) center center/cover no-repeat;
   }
   #active {
-  	background: var(--BG-LoadBar) left bottom/cover no-repeat;
+  	background: var(--BG-LoadBar) var(--Code-1);
   }
   #playbar {
   	background: var(--BG-SongTime);
   }
   #songinfo {
-  	background: var(--BG-SongInfo) left bottom/cover no-repeat;
+  	background: var(--BG-SongInfo) var(--Code-1);
   	text-align: center;
   }
 
@@ -155,6 +161,7 @@
       top: 0;
       z-index: 0;
       clip-path: polygon(7% 0, 90% 0, 90% 100%, 7% 100%);
+      background: var(--BG-SongTime) right bottom/auto no-repeat;
     } 
     #songtime::after {
       content: var(--Text-Boxy);
@@ -170,6 +177,7 @@
     #playbar {
       #active {
         z-index: 9999;
+        background: var(--BG-LoadBar) center bottom/auto no-repeat;
       }
     } 
     #songinfo {
@@ -255,6 +263,10 @@
   .absolute.left-0.right-0 {
     visibility: hidden;
   } 
+  background: var(--BG-TitleBar-Shell);
+  #songinfo {
+    background: var(--BG-SongInfo);
+  }
   .absolute.left-0.right-0::after {
     visibility: visible;
     content: var(--Text-Shell);
@@ -296,7 +308,7 @@
  .flex.w-full.min-w-0.flex-col.gap-2.px-5.py-6.bg-lightDiscordLight.rounded-tl-xl,
  .flex.w-full.min-w-0.flex-col.gap-2.px-5.py-6.bg-discordLight.false,
  .flex.w-full.min-w-0.flex-col.gap-2.px-5.py-6.bg-lightDiscordLight.false {
-  background: var(--BG-SongInfo) center center/cover no-repeat;
+  background: var(--BG-SongInfo-Discord) center center/cover no-repeat;
  }
  #songinfo,
   #songtime {
@@ -316,7 +328,7 @@
  .h-full.w-full.rounded-full.bg-discordDivider, 
  .absolute.top-3.h-16.w-3.rounded-full.bg-white,
  .h-full.w-full.rounded-full.bg-lightDiscordDivider {
-  background: var(--BG-DiscordActiveChat);
+  background: var(--DiscordActiveChat);
  }
  .flex.items-center.transition-all.duration-500 {
     visibility: visible; 
