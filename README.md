@@ -4,7 +4,7 @@
 > English Guide: Comming Soon!
 
 ## Tiếng Việt
-* **Cách Cài Đặt**
+* *Cách Cài Đặt*
 
 Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/Amase-6KLabs/blob/main/Amase.CSS) Rùi Cho Vào Trong Custom CSS Trong Brownser Source Của OBS Là Được ✔
 >     Bạn Có Thể Thay Đổi Ảnh/Background Ở Ngay Phần Đầu Config - MAIN CONFIG
@@ -14,6 +14,23 @@ Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/
 
 > [!WARNING]
 > Nếu Không Có Thay Đổi Gì Hoặc Không Hiện "Inject Modify Success" Thì Hãy Refresh Lại Brownser Source Nha!
+
+> [!CAUTION]
+> Khu Vực Dành Cho Bạn Nào Thay Ảnh Nền Hoặc Chỉnh Sửa Config
+> <details>
+  <summary>Chỉnh Sửa Vị Trí Bố Cục Hiện Thị</summary>
+  
+ Do Mình Code Để Hỗ Trợ Tốt Nhất Những Cái Mặc Định Nên Có Thể Gây Lỗi Khi Custom.
+ Nếu Bạn Muốn Thay Background Hãy Tìm Đoạn Code.... 
+  
+  ```
+  --Code-1: left bottom/cover no-repeat;
+  ```
+Và Sửa Thành Dưới Đây Để Hiện Thị Ở Chính Giữa File....
+  ```
+  --Code-1: center center/cover no-repeat;
+  ```
+</details>
 
 
 ***Và Chỉ Có Như Vậy Thôi!***
