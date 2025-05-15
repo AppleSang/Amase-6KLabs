@@ -15,7 +15,7 @@ Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/
 > ![image](https://github.com/user-attachments/assets/5a0cb08d-ce8a-459e-9d76-ef0aaa22ee46)
 
 
-> [!WARNING]
+> [!TIP]
 > Nếu Không Có Thay Đổi Gì Hoặc Không Hiện "Inject Modify Success" Thì Hãy Refresh Lại Brownser Source Nha!
 
 > [!CAUTION]
