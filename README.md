@@ -1,7 +1,4 @@
-
 ![Amase-Banner-Crop](https://github.com/user-attachments/assets/96eb9a28-1e17-4b91-a0a2-37612fed24e0)
-
-
 
 > English Guide: Comming Soon!
 
@@ -18,7 +15,7 @@ Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/
 
 
 > [!TIP]
-> Nếu Không Có Thay Đổi Gì Hoặc Không Hiện "Inject Modify Success" Thì Hãy Refresh Lại Brownser Source Nha!
+> Nếu Không Có Thay Đổi Gì Hoặc Không Hiện "Inject Modify Success" Thì Hãy Refresh Lại Browser Source Nha!
 
 > [!CAUTION]
 > Khu Vực Dành Cho Bạn Nào Thay Ảnh Nền Hoặc Chỉnh Sửa Config
