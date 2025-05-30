@@ -3,7 +3,7 @@
 
 > English Guide: Comming Soon!
 
-## Tiếng Việt
+## Tiếng Việt 	:vietnam:
 * *Cách Cài Đặt*
 
 Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/Amase-6KLabs/blob/main/Amase.CSS) Rùi Cho Vào Trong Custom CSS Trong Brownser Source Của OBS Là Được ✔
