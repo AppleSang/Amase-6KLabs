@@ -1,5 +1,6 @@
 
-![image](https://github.com/user-attachments/assets/9dffb532-9f5e-4907-8851-d5daea84bc12)
+![Amase-Banner-Crop](https://github.com/user-attachments/assets/96eb9a28-1e17-4b91-a0a2-37612fed24e0)
+
 
 
 > English Guide: Comming Soon!
