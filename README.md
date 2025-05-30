@@ -1,12 +1,12 @@
-# Amase-6KLabs
-♫ Personalization Your [Amuse](https://6klabs.com/amuse)-[6KLabs](https://6klabs.com/)  ✨
+
+![Amase-Banner](https://github.com/user-attachments/assets/9dffb532-9f5e-4907-8851-d5daea84bc12)
 
 > English Guide: Comming Soon!
 
-## Tiếng Việt 	:vietnam:
-* *Cách Cài Đặt*
+## Tiếng Việt 
+* 🔧 *Cách Cài Đặt* 🔧
 
-Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/Amase-6KLabs/blob/main/Amase.CSS) Rùi Cho Vào Trong Custom CSS Trong Brownser Source Của OBS Là Được ✔
+Chỉ Cần Copy Nội Dung Trong File [Amase.CSS](https://github.com/AppleSang/Amase-6KLabs/blob/main/Amase.CSS) Rùi Cho Vào Trong Custom CSS Trong Browser Source Của OBS Là Được ✔
 >     Bạn Có Thể Thay Đổi Ảnh/Background Ở Ngay Phần Đầu Config - MAIN CONFIG
 <sup> Vì mình không có After Effect Để Remove Vài Thứ Nên Nếu Không Ưng Bạn Có Thể Xài Bản [Amase_Legacy.CSS](https://github.com/AppleSang/Amase-6KLabs/blob/main/Amase_Legacy.CSS)</sup>
 > [!IMPORTANT]
