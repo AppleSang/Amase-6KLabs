@@ -1,0 +1,336 @@
+  /* READ ME WHEN USE THIS CSS */
+  /* Some asset GIF, background banner from 7TV - https://www.twitch.tv/desmondvu and GoalBar - https://nerdordie.com/product/iridescent-stream-pack */
+  /* If you found bug, you create issue on github: https://github.com/AppleSang/Amase-6KLabs/issues */
+
+  /* TURN OFF "COVER BLUR" FOR BEST VISUAL - https://6klabs.com/dashboard/widgets/amuse */
+
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&family=Pacifico&display=swap");
+
+  /* MAIN CONFIG 6KLABS CSS */
+  :root {
+  	/* Player Appearance Config */
+  	--BG-SongTime: url("https://raw.githubusercontent.com/AppleSang/Amase-6KLabs/refs/heads/main/texturepack/Skyshard_Wave-E6.gif");
+  	--BG-LoadBar: url("https://raw.githubusercontent.com/AppleSang/Amase-6KLabs/refs/heads/main/texturepack/Honey_Wave_Trans.gif");
+  	--BG-SongBar: url("https://raw.githubusercontent.com/AppleSang/Amase-6KLabs/refs/heads/main/texturepack/WavePink-SongBar.gif");
+  	--BG-SongInfo: url("https://raw.githubusercontent.com/AppleSang/Amase-6KLabs/refs/heads/main/texturepack/Skyshard_Wave-E6.gif");
+  	/* If Appear When Change Song Or Using "Vinyl" Canva - Leave Blank If You Dont Want - Default Value: https://raw.githubusercontent.com/AppleSang/LumboChat-CSS-Youtube/refs/heads/main/asset/Honey.webp*/
+  	--BG-Cover: url("");
+  	/* Emoji Appearance In Cover/Album Art - Leave If Blank If You Dont Like */
+  	--Emoji1: url("");
+  	--Emoji2: url("https://cdn.7tv.app/emote/01FBS4X63R000AAZQB4F0E7SEB/4x.avif");   /* DJ Emoji */
+    /* It Appear When Using Player "Boxy" */
+    --Text-Boxy: "AppleSang";
+    --FontSize-Boxy: 15px;  /* Recommend This Value < 16 */
+    /* It Appear When Using Player "macOS" */
+    --BG-SongInfo-MacOS: url("https://github.com/AppleSang/CSS-Chat-For-Youtube/raw/refs/heads/main/asset/Dark_Iridescent.webp");
+    --Text-macOS: "AppleSang";
+    /* It Appear When Using Player "Shell" */
+    --BG-TitleBar-Shell: url("https://raw.githubusercontent.com/AppleSang/Amase-6KLabs/refs/heads/main/texturepack/Skyshard-WaveBar_Trans.gif");
+    --Text-Shell: "AppleSang";
+    /* It Appear When Using Player "Discord" */
+    --BG-SongInfo-Discord: url("https://github.com/AppleSang/CSS-Chat-For-Youtube/raw/refs/heads/main/asset/Dark_Iridescent.webp");    
+    --DiscordActiveChat: url("https://github.com/AppleSang/CSS-Chat-For-Youtube/raw/refs/heads/main/asset/Crimson.webp");
+    /* Code You Can Edit Here - READ CAREFULLY ON GITHUB */
+    --Code-1: left bottom/cover no-repeat;
+  }
+
+  /* MAIN CODE, TOUCH IF YOU WHAT YOU DO */
+  body { 
+  	overflow: hidden; 
+  }
+  /* Disable New Update */
+  img[src*="NEW-UPDATE-OUT-NOW"],
+  img[src*="amuse_2"],
+  img[src*="logo_white"],
+  img[src*="NEW-PLAYER-DESIGN"] {
+    display: none;
+  }
+  /* Annouce Inject Code Success */
+  .text-xs {
+    visibility: hidden;
+    position: relative;
+  }
+  .text-xs::after {
+    visibility: visible;
+    content: "✔ Inject Modify Success  // AppleSang 🍎";
+    color: green;
+    text-align: left;
+    position: relative;
+    left: -14px;
+   }
+  /* Change Background */
+  #songtime { 
+  	background: var(--BG-SongTime) var(--Code-1);
+   }
+  .relative.aspect-square.h-full {
+  	background: var(--BG-Cover) center center/cover no-repeat;
+  }
+  #active {
+  	background: var(--BG-LoadBar) var(--Code-1);
+  }
+  #playbar {
+  	background: var(--BG-SongTime);
+  }
+  #songinfo {
+  	background: var(--BG-SongInfo) var(--Code-1);
+  	text-align: center;
+  }
+
+  /* Add Emoji */
+  .relative.flex.h-full.w-full {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .relative.flex.h-full.w-full::before,
+  .relative.flex.h-full.w-full::after {
+    content: "";
+    position: absolute;
+    inset: 0;                    
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    animation: fadeSwitch 12s linear infinite;
+  }
+
+  .relative.flex.h-full.w-full::before {
+    background: var(--Emoji1) center center/cover no-repeat;
+    animation-delay: 0s;
+    scale: 0.88;
+    z-index: -1;
+  }
+
+  .relative.flex.h-full.w-full::after {
+    background: var(--Emoji2) center center/cover no-repeat;
+    animation-delay: 6s;
+    scale: 0.88;
+    z-index: -1;
+  }
+
+
+  @keyframes fadeSwitch {
+    0%,   45%  { opacity: 1; }
+    50%,  95%  { opacity: 0; }
+    100%        { opacity: 1; }
+  }
+
+
+  .p-4.text-white {
+  	background: var(--BG-SongInfo) center center/cover no-repeat;
+  }
+
+  /* Force Hide Visualizer */
+  .flex.items-center.transition-all.duration-500 {
+    visibility: hidden; 
+  }
+  /* Scale SongBarLoad */
+  #playbar {
+  	width: 170px;
+  	transform: translate(180px, -33px);
+  	z-index: 123456;
+  }
+
+  .flex.select-none.flex-col.gap-2 {
+    container-type: inline-size;           
+  }
+  @container (width: 284px) {
+    #playbar {
+      transform: translate(60px, -33px);
+    }
+  }
+  .flex.h-fit.w-52.flex-col.gap-2 #playbar {
+    transform: translate(0px, 0px);
+  }
+  .bottom-3.flex.h-20.select-none.items-end.gap-2.text-white #playbar {
+    transform: translate(6px, 0px);
+  }
+  /* MODIFY APPEAR BOXY */
+  .bottom-3.flex.h-20.select-none.items-end.gap-2.text-white  {
+    #active {
+      display: block;
+      aspect-ratio: 1 / 1;
+      border-radius: 0;
+      position: absolute;
+      top: -44px;
+      left: -10px;
+      height: 80px;
+      scale: 1.11;
+    }
+    #songtime {
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      clip-path: polygon(7% 0, 90% 0, 90% 100%, 7% 100%);
+      background: var(--BG-SongTime) right bottom/auto no-repeat;
+    } 
+    #songtime::after {
+      content: var(--Text-Boxy);
+      font-size: var(--FontSize-Boxy); 
+      transform: rotate(270deg);
+      white-space: pre-line;
+      font-family: Ephesis;
+      border: 2px dashed;
+      padding: 26px 22px;
+      position: relative;
+      left: -9px;
+    }
+    #playbar {
+      #active {
+        z-index: 9999;
+        background: var(--BG-LoadBar) center bottom/auto no-repeat;
+      }
+    } 
+    #songinfo {
+      visibility: hidden;
+      z-index: 1;
+    }
+    #songinfo {
+      .relative.z-50.mt-1.overflow-clip.whitespace-nowrap.text-lg.font-bold.false,
+      .relative.z-50.mt-1.overflow-clip.whitespace-nowrap.text-lg.font-bold.animated-title,
+      .relative.z-50.mb-1.overflow-clip.overflow-ellipsis.whitespace-nowrap.text-sm {
+        visibility: visible;
+        z-index: 3;
+      }
+    }
+
+  .relative.aspect-square.h-full ~ #songtime {
+    transform: translateX(90px) !important;  /* ép luôn dịch sang phải 50px */
+  }
+  .relative.aspect-square.h-full ~ #songinfo {
+    text-align: right;
+  }
+  .relative.aspect-square.h-full {
+    transform: translateX(26px) !important;
+  }
+
+  .bottom-3.flex.h-20.select-none.items-end.gap-2.text-white {
+    visibility: hidden;
+  }
+
+    #playbar {
+      visibility: hidden; 
+    }
+    #playbar #active {
+    visibility: visible;          /* cho con hiển thị lại */
+    position: relative;           /* nếu cần đưa lên trên layer */
+    z-index: 0;
+    }
+
+    #songtime {
+      .flex.w-12.justify-start.text-sm.font-bold,
+      .flex.w-12.justify-end.text-sm.font-bold {
+        display: none;
+      }
+    }
+  }
+
+
+
+/* MODIFY MACOS  APPEAR */
+.bg-osxContentBg,
+.bg-osxContentBgLight {
+  background: var(--BG-SongInfo-MacOS) center center/cover no-repeat;
+  #songinfo,
+  #songtime {
+    visibility: hidden;
+  }
+  .relative.z-50.-mt-1.overflow-clip.whitespace-nowrap.text-lg.font-bold.drop-shadow-md.false,
+  .relative.z-50.-mt-1.overflow-clip.whitespace-nowrap.text-lg.font-bold.drop-shadow-md.animated-title,
+  .flex.w-full.flex-col.gap-1,
+  .flex.w-full.justify-between,
+  #playbar,
+  .flex.items-center.transition-all.duration-500,
+  .relative.z-50.mb-1.overflow-clip.overflow-ellipsis.whitespace-nowrap.text-sm {
+    visibility: visible;
+  }
+  .h-4.w-4.rounded-full.bg-osxFullscreen::before {
+    content: var(--Text-macOS);
+    position: absolute;
+    left: 100px;
+    top: 8px;
+  }
+}
+  .flex.flex-col.overflow-hidden.rounded-2xl.duration-300.bg-osxContentBg.text-white.outline.outline-2.outline-osxTopBg #playbar,
+  .flex.flex-col.overflow-hidden.rounded-2xl.duration-300.bg-osxContentBgLight.text-black.outline.outline-2.outline-osxTopBgLight #playbar {
+    transform: translate(6px, 0px);
+    z-index: 9999999999;
+  }
+
+/* MODIFY SHELL APPEAR */
+
+.relative.bg-shellMenuBar,
+.bg-shellMenuBarLight {
+  .absolute.left-0.right-0 {
+    visibility: hidden;
+  } 
+  background: var(--BG-TitleBar-Shell);
+  #songinfo {
+    background: var(--BG-SongInfo);
+  }
+  .absolute.left-0.right-0::after {
+    visibility: visible;
+    content: var(--Text-Shell);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    color: green;
+    text-align: center;
+  }
+}
+.text-gray-400 {
+  color: transparent; 
+  display: inline-block;
+  position: relative;
+  }
+.text-gray-400::after {
+  visibility: visible;
+  content: "--AppleSang_Modify";
+  position: absolute;
+  color: gray;
+  top: 0;
+  bottom: 0;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  left: 0;
+  right: 0;
+  display: block; 
+}
+
+
+/*  MODIFY DISCORD PLAYER */
+
+.bg-lightDiscordDark,
+.bg-discordDark {
+ .flex.w-full.min-w-0.flex-col.gap-2.px-5.py-6.bg-discordLight.rounded-tl-xl,
+ .flex.w-full.min-w-0.flex-col.gap-2.px-5.py-6.bg-lightDiscordLight.rounded-tl-xl,
+ .flex.w-full.min-w-0.flex-col.gap-2.px-5.py-6.bg-discordLight.false,
+ .flex.w-full.min-w-0.flex-col.gap-2.px-5.py-6.bg-lightDiscordLight.false {
+  background: var(--BG-SongInfo-Discord) center center/cover no-repeat;
+ }
+ #songinfo,
+  #songtime {
+    visibility: hidden;
+  }
+  .relative.z-50.-mt-1.overflow-clip.whitespace-nowrap.text-lg.font-bold.drop-shadow-md.false,
+  .relative.z-50.-mt-1.overflow-clip.whitespace-nowrap.text-lg.font-bold.drop-shadow-md.animated-title,
+  .flex.w-full.flex-col.gap-1,
+  .flex.w-full.justify-between,
+  #playbar,
+  .flex.items-center.transition-all.duration-500,
+  .relative.z-50.mb-1.overflow-clip.overflow-ellipsis.whitespace-nowrap.text-sm {
+    visibility: visible;
+  }
+ #playbar {transform: translate(0px, 0px); }
+ .bg-lightDiscordActiveChat,
+ .h-full.w-full.rounded-full.bg-discordDivider, 
+ .absolute.top-3.h-16.w-3.rounded-full.bg-white,
+ .h-full.w-full.rounded-full.bg-lightDiscordDivider {
+  background: var(--DiscordActiveChat);
+ }
+ .flex.items-center.transition-all.duration-500 {
+    visibility: visible; 
+  }
+}
