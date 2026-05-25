@@ -1,5 +1,4 @@
   /* READ ME WHEN USE THIS CSS */
-  /* Some asset GIF, background banner from 7TV - https://www.twitch.tv/desmondvu and GoalBar - https://nerdordie.com/product/iridescent-stream-pack */
   /* If you found bug, you create issue on github: https://github.com/AppleSang/Amase-6KLabs/issues */
 
   /* TURN OFF "COVER BLUR" FOR BEST VISUAL - https://6klabs.com/dashboard/widgets/amuse */
@@ -39,11 +38,9 @@
   	overflow: hidden; 
   }
   /* Disable New Update */
-  img[src*="NEW-UPDATE-OUT-NOW"],
-  img[src*="amuse_2"],
-  img[src*="logo_white"],
-  img[src*="NEW-PLAYER-DESIGN"] {
-    display: none;
+[class*="z-50"][class*="select-none"] {
+    display: none !important;
+}
   }
   /* Annouce Inject Code Success */
   .text-xs {
